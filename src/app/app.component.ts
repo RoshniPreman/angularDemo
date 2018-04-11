@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
-@Component({
+
+
+@Component({      // @component is a decorator function that specifies angular metadata for the component
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: 'app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Tour of Heros';
+  
 }
