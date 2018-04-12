@@ -1,3 +1,4 @@
+// ES6 destructuring
 import { Component } from '@angular/core';
 
 

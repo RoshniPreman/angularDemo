@@ -8,5 +8,9 @@ if (environment.production) {
   enableProdMode();
 }
 
+//  Bootstraping is platform specific
+//  we are running in the browser so we use the platformBrowserDynamic function to bootstrap our application
+//  We can use ionic for mobile device
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));

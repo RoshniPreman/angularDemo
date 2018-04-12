@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import  Hero  from '../hero'; // default exported class without curly brace with alias name
+import  Hero , { Heroes }  from '../hero'; // default exported class without curly brace with alias name
 
 
 @Component({
@@ -14,9 +14,10 @@ export class HerosComponent implements OnInit {
   ngOnInit() {
   }
 
-  hero : Hero =  {
-    id : 1,
-    name : 'Windstorm'
-  }
+  heroes = Heroes;
+  selectedHero : Hero;
 
+  selectHero(hero : Hero) : void{
+      this.selectedHero = hero;
+  }
 }

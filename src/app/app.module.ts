@@ -7,7 +7,7 @@ import { HerosComponent } from './heros/heros.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [ // list of components or directives belonging to this module
     AppComponent,
     HerosComponent
   ],
@@ -16,6 +16,6 @@ import { HerosComponent } from './heros/heros.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] // Identify the rootcomponent that angular should bootstrap when it starts the application
 })
 export class AppModule { }
