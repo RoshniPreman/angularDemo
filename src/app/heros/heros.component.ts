@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import  Hero , { Heroes }  from '../hero'; // default exported class without curly brace with alias name
-
+import Hero from '../hero'
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heros',
@@ -9,12 +9,20 @@ import  Hero , { Heroes }  from '../hero'; // default exported class without cur
 })
 export class HerosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private heroService : HeroService) { } // Reserve constructor for simple initialization and call functions inside ngOnInit
 
   ngOnInit() {
+    this.getHeroes();
   }
 
-  heroes = Heroes;
+  heroes : Hero[];
+
+  getHeroes() : void{
+      // this.heroes = this.heroService.getHeros(); // without observable
+
+      this.heroService.getHeros().
+              subscribe( heroes => this.heroes = heroes );
+  }
   selectedHero : Hero;
 
   selectHero(hero : Hero) : void{
