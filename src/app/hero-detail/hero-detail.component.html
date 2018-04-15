@@ -2,7 +2,7 @@
 <!-- With the () we are binding to an output of a Component. -->
 <!-- With the [()] we are doing two way binding. -->
 
-<div>
+<div *ngIf="hero">
 
   <h2>{{ hero.name | uppercase }} Details</h2>
   <!-- Format using UppercasePipe -->
